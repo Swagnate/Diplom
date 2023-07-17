@@ -1,0 +1,19 @@
+<section class="strengths">
+    <div class="container">
+        <h2 class="section__head">почему мы</h2>
+    </div>
+    <div class="container">
+        <div class="strengths__wrapper">
+            <div *ngFor="let group of groupedStrengths; index as multiplier" class="strengths__row">
+                <div *ngFor="let strength of group; index as itemIndex; count as blockLine" class="strength {{ 'strength-' + (blockLine * multiplier + itemIndex + 1) }}">
+                    <img src="{{ strength.img }}" alt="Картинка {{ strength.title }}" class="strength__bg">
+                    <div class="strength__content">
+                        <h3 class="strength__head">{{ strength.title }}</h3>
+                        <p class="strength__text">{{ strength.desc }}</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

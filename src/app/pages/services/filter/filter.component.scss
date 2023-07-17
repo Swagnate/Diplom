@@ -1,0 +1,15 @@
+.filter {
+  padding-top: 40px;
+}
+.filter__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  > * {
+    margin-right: 15px;
+    flex: 1;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
